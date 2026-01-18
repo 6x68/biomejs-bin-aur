@@ -26,4 +26,7 @@ jobs:
             - run: cd updater && cargo run
 
             - name: Commit PKGBUILD updates
-              run: "git add PKGBUILD && git commit -m 'deps: bump BiomeJS version' && git push"
+              run: |
+                git add PKGBUILD
+                git commit -m 'deps: bump BiomeJS version' || exit 0
+                git push"
