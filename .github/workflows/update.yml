@@ -27,10 +27,16 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - run: cd updater && cargo run
+      - name: Install pkgtools for makepkg
+        run: sudo apt install -y pkgtools
+      - name: Run updater
+        run: cd updater && cargo run
+
+      - name: Update .SRCINFO file
+        run: makepkg --printsrcinfo > .SRCINFO
 
       - name: Commit PKGBUILD updates
         run: |
-          git add PKGBUILD
+          git add PKGBUILD .SRCINFO
           git commit -m 'deps: bump BiomeJS version' || exit 0
           git push"

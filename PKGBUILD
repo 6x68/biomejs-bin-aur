@@ -1,5 +1,4 @@
 # note: I can't test arm64 support.
-# makepkg --printsrcinfo > .SRCINFO
 
 pkgname=biomejs-bin
 pkgver=2.3.11
@@ -10,7 +9,7 @@ url="https://github.com/biomejs/biome"
 license=('MIT OR Apache-2.0')
 depends=()
 provides=('biome')
-# biome JS source package coming NEVER...
+# too lazy to make a PKGBUILD to install from source or git lol
 # conflicts=('biomejs')
 
 source_x86_64=("biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@$pkgver/biome-linux-x64")
