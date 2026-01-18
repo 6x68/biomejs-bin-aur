@@ -13,13 +13,8 @@ on:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    container:
-      image: archlinux:latest
+    runs-on: ubuntu-slim
     steps:
-      - run: |
-          pacman -Syu --noconfirm base-devel git
-
       - uses: actions/checkout@v6
 
       - name: Setup Rust and Cargo
@@ -32,14 +27,10 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Run updater
-        run: cd updater && cargo run
-
-      - name: Update .SRCINFO file
-        run: EUID=1 makepkg --printsrcinfo > .SRCINFO
+      - run: cd updater && cargo run
 
       - name: Commit PKGBUILD updates
         run: |
-          git add PKGBUILD .SRCINFO
+          git add PKGBUILD
           git commit -m 'deps: bump BiomeJS version' || exit 0
           git push"
