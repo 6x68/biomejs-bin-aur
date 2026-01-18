@@ -1,0 +1,4 @@
+# ${pkgdir}
+/pkg
+# ${srcdir}
+/src

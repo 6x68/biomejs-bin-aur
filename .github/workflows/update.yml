@@ -1,0 +1,21 @@
+name: "Update"
+description: Updates
+on:
+    schedule:
+        - cron: "*/5 * * * *"
+    workflow_dispatch:
+    workflow_call:
+
+jobs:
+    update:
+        runs-on: ubuntu-slim
+        steps:
+            - uses: actions/checkout@v6
+            - name: Setup Rust and Cargo
+              uses: moonrepo/setup-rust@v1.2.2
+
+            - run: cargo run
+            - name: Setup Git
+              run: |
+                git config --global user.name "GitHub Actions"
+                git config --global user.email "actions@github.com"
