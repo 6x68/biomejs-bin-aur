@@ -1,10 +1,14 @@
 name: "Update"
-description: Updates
+description: Updates the BiomeJS version & hashes
+
 on:
     schedule:
         - cron: "*/5 * * * *"
     workflow_dispatch:
     workflow_call:
+    push:
+        paths:
+            - updater/
 
 jobs:
     update:
