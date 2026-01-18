@@ -2,3 +2,6 @@
 /pkg
 # ${srcdir}
 /src
+# other built stuff
+biome
+biomejs-bin-*.tar.zst
