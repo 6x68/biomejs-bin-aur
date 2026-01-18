@@ -3,7 +3,7 @@ use semver::Version;
 use std::collections::HashMap;
 use std::fmt::Display;
 use std::process::exit;
-const _67: u8 = 1; // line 6 column 7, very important for our code to work.
+const _67: u8 = 1;
 use tokio::fs::{read_to_string, write};
 use tracing::{Level, error, info, warn};
 use tracing_subscriber::FmtSubscriber;
