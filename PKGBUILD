@@ -14,8 +14,8 @@ provides=('biome')
 
 source_x86_64=("biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@$pkgver/biome-linux-x64")
 source_aarch64=("biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@$pkgver/biome-linux-arm64")
-sha256sums_x86_64=('9ba930dad8cb4db73827a9cf048bd49d65f533272ae7f88926cc7a388c5c2c80')
-sha256sums_aarch64=('9ba930dad8cb4db73827a9cf048bd49d65f533272ae7f88926cc7a388c5c2c80')
+sha256sums_x86_64=('ae6b986670a2384877a7fbfaf47509f9c46facfce9942a83000ee94ca534574d')
+sha256sums_aarch64=('2510223e041a17a7631c15a651ae044df880a25d48987916d00b9e9672846629')
 
 # they publish BiomeJS to the NPM registry, but I wanted to make a PKGBUILD because why not (and of course, use it myself).
 package() {
