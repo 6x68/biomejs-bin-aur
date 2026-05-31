@@ -19,6 +19,7 @@ sha256sums_aarch64=('e81067782ddd9a9d45e13b8fe18bbef54c490cf26126f05d67bb370caf4
 
 # they publish BiomeJS to the NPM registry, but I wanted to make a PKGBUILD because why not (and of course, use it myself).
 package() {
+    mkdir -p "$srcdir"
     local bin_name="biome"
     local bin_path="$srcdir/$bin_name"
     local dest_folder="$pkgdir/usr/bin"
