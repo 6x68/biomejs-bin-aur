@@ -1,15 +1,15 @@
 pkgbase = biomejs-bin
 	pkgdesc = A toolchain for the web: formatter, linter and more
-	pkgver = 2.4.13
+	pkgver = 2.4.16
 	pkgrel = 1
 	url = https://github.com/biomejs/biome
 	arch = x86_64
 	arch = aarch64
 	license = MIT OR Apache-2.0
 	provides = biome
-	source_x86_64 = biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.4.13/biome-linux-x64
-	sha256sums_x86_64 = f5a3cf9cbe40ba7dd8ecd469567cac00635462589a3acfe97e5d8cab8b866c1c
-	source_aarch64 = biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.4.13/biome-linux-arm64
-	sha256sums_aarch64 = 8aff839821c82ba5ba8455a52d8beacb02229697e781ebaa095f8442fdb6ae51
+	source_x86_64 = biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.4.16/biome-linux-x64
+	sha256sums_x86_64 = f6904c208ce8884cf859460178f32f885250b375da1810c551912a029f4abf79
+	source_aarch64 = biome::https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.4.16/biome-linux-arm64
+	sha256sums_aarch64 = e81067782ddd9a9d45e13b8fe18bbef54c490cf26126f05d67bb370caf47502a
 
 pkgname = biomejs-bin
